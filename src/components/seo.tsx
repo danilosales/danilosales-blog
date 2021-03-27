@@ -1,17 +1,26 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from 'react'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 type SEOProps = {
   description?: string
   lang?: string
-  meta?: Array<{name: string, content: string}>
+  meta?: Array<{ name: string; content: string }>
   title: string
 }
 
-function SEO({ description = '', lang = 'en', meta=[], title }: SEOProps) {
-  const { site }: any = useStaticQuery(
+type HeaderData = {
+  site: {
+    siteMetadata: {
+      title: string
+      description: string
+      author?: string
+    }
+  }
+}
+
+function SEO({ description = '', lang = 'en', meta = [], title }: SEOProps) {
+  const { site }: HeaderData = useStaticQuery(
     graphql`
       query {
         site {
@@ -31,43 +40,43 @@ function SEO({ description = '', lang = 'en', meta=[], title }: SEOProps) {
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : ''}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           property: `og:title`,
-          content: title,
+          content: title
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: `website`
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary`
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.author || ``
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: title
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
-        },
+          content: metaDescription
+        }
       ].concat(meta)}
     />
   )
