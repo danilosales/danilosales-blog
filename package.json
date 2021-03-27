@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "My personal blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Danilo Sales <danilosales.info@gmail.com>",
   "dependencies": {
     "gatsby": "^3.1.2",
     "gatsby-plugin-gatsby-cloud": "^2.1.0",
@@ -20,6 +20,9 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-router-dom": "^5.1.7",
     "prettier": "2.2.1"
   },
   "keywords": [
