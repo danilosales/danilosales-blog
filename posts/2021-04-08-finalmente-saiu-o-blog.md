@@ -10,7 +10,7 @@ thumbnail: https://images.unsplash.com/photo-1569748130764-3fed0c102c59?crop=ent
 ![React code block](https://images.unsplash.com/photo-1569748130764-3fed0c102c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE3OTI4NTIx&ixlib=rb-1.2.1&q=80&w=1080)
 
 Opa, e aí, cheguei para ficar!\
-Seja bem-vinde ao meu humilde blog, não tem lá muita coisa ainda, mas com o tempo pretendo preencher esse pequeno site com bastante conhecimento, tanto o que ando aprendendo, quanto os que eu já sei.
+Seja bem-vindo ao meu humilde blog, não tem lá muita coisa ainda, mas com o tempo pretendo preencher esse pequeno site com bastante conhecimento, tanto o que ando aprendendo, quanto os que eu já sei.
 
 Agora vamos ao assunto principal: *por que eu tirei esse blog do fundo do baú?* A muito tempo venho com a idéia de fazer um blog, mas como toda pessoa desenvolvedora de respeito, acaba deixando o projeto de lado e segue fazendo outras milhares de coisas e nunca termina aquilo que começou.
 
