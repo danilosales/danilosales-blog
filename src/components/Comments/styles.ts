@@ -15,18 +15,18 @@ export const CommentsWrapper = styled.section`
     display: none;
   }
 
-  #discus_thread {
+  #disqus_thread {
     a {
       color: var(--highlight) !important;
     }
-  }
 
-  .publisher-anchor-color a {
-    color: rgb(31 153 211) !important;
-  }
+    .publisher-anchor-color a {
+      color: var(--highlight) !important;
+    }
 
-  .active .publisher-nav-color::after {
-    background: rgb(31 153 211) !important; 
+    .active .publisher-nav-color::after {
+      background: var(--highlight) !important; 
+    }
   }
 `
 
