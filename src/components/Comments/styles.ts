@@ -20,6 +20,14 @@ export const CommentsWrapper = styled.section`
       color: var(--highlight) !important;
     }
   }
+
+  .publisher-anchor-color a {
+    color: rgb(31 153 211) !important;
+  }
+
+  .active .publisher-nav-color::after {
+    background: rgb(31 153 211) !important; 
+  }
 `
 
 export const CommentsTitle = styled.h2`
