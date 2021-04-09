@@ -2,7 +2,7 @@ backend:
   name: github
   repo: danilosales/danilosales-blog
   branch: master
-  site_domain: danilosales.dev
+  site_domain: https://danilosales.dev
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
