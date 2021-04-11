@@ -25,7 +25,7 @@ export const CommentsWrapper = styled.section`
     }
 
     .active .publisher-nav-color::after {
-      background: var(--highlight) !important; 
+      background: var(--highlight) !important;
     }
   }
 `

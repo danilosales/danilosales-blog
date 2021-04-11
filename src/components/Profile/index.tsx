@@ -1,25 +1,24 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 
 import Avatar from '../Avatar'
 import * as S from './styles'
 import getThemeColor from '../../utils/getThemeColor'
 
-const Profile = () => {
-  const data = useStaticQuery(graphql`
-    query MySiteMetadata {
-      site {
-        siteMetadata {
-          title
-          position
-          description
-        }
-      }
-    }
-  `)
+type ProfileProps = {
+  title: string
+  position: string
+  description: string
+  isMobileHeader: boolean
+}
 
+const Profile = ({
+  title,
+  position,
+  description,
+  isMobileHeader
+}: ProfileProps) => {
   return (
-    <S.ProfileWrapper>
+    <S.ProfileContainer isMobileHeader={isMobileHeader}>
       <S.ProfileLink
         to="/"
         cover
@@ -29,16 +28,12 @@ const Profile = () => {
       >
         <Avatar />
         <S.ProfileAuthor>
-          {data.site.siteMetadata.title}
-          <S.ProfilePosition>
-            {data.site.siteMetadata.position}
-          </S.ProfilePosition>
+          {title}
+          <S.ProfilePosition>{position}</S.ProfilePosition>
         </S.ProfileAuthor>
       </S.ProfileLink>
-      <S.ProfileDescription>
-        {data.site.siteMetadata.description}
-      </S.ProfileDescription>
-    </S.ProfileWrapper>
+      <S.ProfileDescription>{description}</S.ProfileDescription>
+    </S.ProfileContainer>
   )
 }
 

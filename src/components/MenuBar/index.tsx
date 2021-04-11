@@ -3,6 +3,7 @@ import { Home } from '@styled-icons/boxicons-solid/Home'
 import { SearchAlt2 as Search } from '@styled-icons/boxicons-regular/SearchAlt2'
 import { UpArrowAlt as Arrow } from '@styled-icons/boxicons-regular/UpArrowAlt'
 import { Bulb as Light } from '@styled-icons/boxicons-regular/Bulb'
+import { Menu } from '@styled-icons/boxicons-regular/Menu'
 
 import * as S from './styles'
 import getThemeColor from '../../utils/getThemeColor'
@@ -15,7 +16,12 @@ declare global {
   }
 }
 
-const MenuBar = () => {
+type MenuBarProps = {
+  isMenuOpen: boolean
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const MenuBar = ({ setIsMenuOpen, isMenuOpen }: MenuBarProps) => {
   const [theme, setTheme] = useState('')
 
   const isDarkMode = theme === 'dark'
@@ -25,6 +31,10 @@ const MenuBar = () => {
 
     window.__onThemeChange = () => setTheme(window.__theme)
   }, [])
+
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <S.MenuBarWrapper>
@@ -36,6 +46,7 @@ const MenuBar = () => {
           direction="right"
           bg="#16202c"
           duration={0.6}
+          activeClassName="active"
         >
           <S.MenuBarItem>
             <Home />
@@ -48,12 +59,21 @@ const MenuBar = () => {
           direction="right"
           bg={getThemeColor()}
           duration={0.6}
+          activeClassName="active"
         >
           <S.MenuBarItem>
             <Search />
           </S.MenuBarItem>
         </S.MenuBarLink>
       </S.MenuBarGroup>
+
+      <S.MenuBarGroupMobile>
+        <S.MenuBarGroup>
+          <S.MenuBarItem title="Abrir Menu" onClick={openMenu}>
+            <Menu />
+          </S.MenuBarItem>
+        </S.MenuBarGroup>
+      </S.MenuBarGroupMobile>
 
       <S.MenuBarGroup>
         <S.MenuBarItem

@@ -4,7 +4,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const MenuBarWrapper = styled.aside`
   align-items: center;
-  background: 'var(--mediumBackground)';
+  background: var(--mediumBackground);
   border-left: 1px solid var(--borders);
   display: flex;
   flex-direction: column;
@@ -14,23 +14,37 @@ export const MenuBarWrapper = styled.aside`
   position: fixed;
   right: 0;
   width: 3.75rem;
-  transition: background 0.5s;
-
+  transition: 0.2s ease;
   ${media.lessThan('large')`
+    border: 0;
     border-top: 1px solid var(--borders);
-    bottom: 0;
+    bottom: -3px;
     flex-direction: row;
     height: auto;
     padding: 0;
+    padding-bottom: env(safe-area-inset-bottom);
     position: fixed;
     width: 100%;
+  `}
+`
+
+export const MenuBarGroupDesktop = styled.div`
+  display: block;
+  ${media.lessThan('large')`
+    display: none;
+  `}
+`
+
+export const MenuBarGroupMobile = styled.div`
+  display: none;
+  ${media.lessThan('large')`
+    display: block;
   `}
 `
 
 export const MenuBarGroup = styled.div`
   display: flex;
   flex-direction: column;
-
   ${media.lessThan('large')`
     flex-direction: row;
   `}
@@ -38,12 +52,15 @@ export const MenuBarGroup = styled.div`
 
 export const MenuBarLink = styled(AniLink)`
   display: block;
-
   &.active {
     span {
       color: var(--highlight);
     }
   }
+`
+
+export const MenuBarExternalLink = styled.a`
+  display: block;
 `
 
 export const MenuBarItem = styled.span`
@@ -54,19 +71,13 @@ export const MenuBarItem = styled.span`
   padding: 1.1rem;
   position: relative;
   width: 3.75rem;
-
+  transition: color 0.2s ease;
+  svg {
+    vertical-align: middle;
+  }
   &.light {
     color: #d4d400;
-
-    &:hover {
-      color: #e2e240;
-    }
   }
-
-  &:hover {
-    color: var(--highlight);
-  }
-
   &.display {
     ${media.lessThan('large')`
       display: none;
