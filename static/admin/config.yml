@@ -3,6 +3,7 @@ backend:
   repo: danilosales/danilosales-blog
   branch: main
   site_domain: https://danilosales.dev
+  base_url: https://danilosales.dev
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"

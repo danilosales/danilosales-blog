@@ -57,6 +57,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.10.3",
+    "simple-oauth2": "^4.2.0",
     "styled-components": "^5.2.1",
     "styled-icons": "^10.31.0",
     "styled-media-query": "^2.1.2"
@@ -67,6 +68,7 @@
     "@types/react-helmet": "^6.1.0",
     "@types/react-instantsearch-dom": "^6.10.0",
     "@types/react-router-dom": "^5.1.7",
+    "@types/simple-oauth2": "^4.1.0",
     "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
