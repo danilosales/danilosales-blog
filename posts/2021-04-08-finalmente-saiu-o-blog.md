@@ -3,6 +3,10 @@ title: Finalmente saiu o blog!
 description: Falando um pouco da experiência de criar um blog
 date: 2021-04-08 22:45:00
 category: misc
+tags:
+  - react
+  - gatsby
+  - graphql
 background: "#637a91"
 thumbnail: https://images.unsplash.com/photo-1569748130764-3fed0c102c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE3OTI4NTIx&ixlib=rb-1.2.1&q=80&w=1080
 ---

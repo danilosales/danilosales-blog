@@ -101,6 +101,63 @@ module.exports = {
         icon: `src/images/icon.png` // This path is relative to the root of the site.
       }
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map((edge) => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.description,
+                  date: edge.node.frontmatter.date,
+                  tags: edge.node.frontmatter.tags.join(','),
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  link: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': edge.node.html }]
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+                  edges {
+                    node {
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        description
+                        date
+                        tags
+                      }
+                      excerpt
+                      html
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/feed.xml',
+            title: 'Danilo Sales Blog - RSS Feed'
+          }
+        ]
+      }
+    },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,

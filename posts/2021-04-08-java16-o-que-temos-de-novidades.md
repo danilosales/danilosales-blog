@@ -4,6 +4,10 @@ description: A mais recente versão do Java foi lançada dia 21 de março e temo
 date: 2021-04-08 23:00:25
 category: java
 background: "#B31917"
+tags:
+  - java
+  - jdk16
+  - java16
 thumbnail: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE3MTIwNTEw&ixlib=rb-1.2.1&q=80&w=1600
 ---
 
