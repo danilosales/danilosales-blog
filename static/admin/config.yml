@@ -44,5 +44,5 @@ collections:
           { label: 'Misc', value: '#637a91' },
         ]
       }
-      - { label: "image", name: "thumbnail", widget: "image" }
+      - { label: "image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }

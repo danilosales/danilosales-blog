@@ -46,7 +46,11 @@ function SEO({
   const metaDescription: string = description || site.siteMetadata.description
   const defaultTitle: string = site.siteMetadata?.title
   const url = site.siteMetadata.siteUrl
-  const ogImage = `${url}${image || '/assets/img/cover.png'}`
+  let ogImage = `${url}/assets/img/cover.png`
+
+  if (image) {
+    ogImage = image.indexOf('http') > -1 ? image : `${url}/${image}`
+  }
 
   return (
     <Helmet

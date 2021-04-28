@@ -8,7 +8,7 @@ tags:
   - java
   - jdk16
   - java16
-thumbnail: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE3MTIwNTEw&ixlib=rb-1.2.1&q=80&w=1600
+image: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE3MTIwNTEw&ixlib=rb-1.2.1&q=80&w=1600
 ---
 
 ![Notebook com código na tela](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE3MTIwNTEw&ixlib=rb-1.2.1&q=80&w=1600)

@@ -8,7 +8,7 @@ tags:
   - gatsby
   - graphql
 background: "#637a91"
-thumbnail: https://images.unsplash.com/photo-1569748130764-3fed0c102c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE3OTI4NTIx&ixlib=rb-1.2.1&q=80&w=1080
+image: https://images.unsplash.com/photo-1569748130764-3fed0c102c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE3OTI4NTIx&ixlib=rb-1.2.1&q=80&w=1080
 ---
 
 ![React code block](https://images.unsplash.com/photo-1569748130764-3fed0c102c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE3OTI4NTIx&ixlib=rb-1.2.1&q=80&w=1080)
