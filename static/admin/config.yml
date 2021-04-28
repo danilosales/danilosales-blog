@@ -22,7 +22,7 @@ collections:
           label: "Date",
           name: "date",
           widget: "datetime",
-          format: "YYYY-MM-DD hh:mm:ss",
+          format: "YYYY-MM-DD kk:mm:ss"
         }
       - { label: 'Tags', name: 'tags', widget: 'list', default: [''] }
       - {
