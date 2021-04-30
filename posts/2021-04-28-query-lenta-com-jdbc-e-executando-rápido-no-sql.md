@@ -111,8 +111,6 @@ public class Livros {
 }
 ```
 
-
-
 ### **Oracle**
 
 No caso do banco de dados Oracle, também temos situação parecida com o do SQL Server, é possível definir colunas em uma mesma tabela que podem ser unicode(**NCHAR, NVARCHAR2, NCLOB**).
@@ -122,7 +120,7 @@ Ao contrário do SQL Server, por default todo parâmetro é enviado como uma Str
 No caso do Oracle não podemos utilizar o **setNString** devemos passar um parâmetro da seguinte forma:
 
 `pstmt.setFormOfUse(1, OraclePreparedStatement.FORM_CHAR);
-pstmt.setString(1, "Livro-50");  `
+pstmt.setString(1, "Livro-50");`
 
 Se você utilizar JPA/Hibernate basta adicionar a anotação **@Nationalized** como mostrado acima.
 
@@ -135,8 +133,6 @@ No caso do Oracle podemos passar a seguinte variável **oracle.jdbc.defaultNChar
 Se você utiliza hibernate, basta adicionar a seguinte propriedade para indicar que todo parâmetro é do tipo unicode:
 
 **hibernate.connection.defaultNChar=true**
-
-
 
 ### PostgreSQL e MySQL
 
@@ -152,8 +148,6 @@ CREATE TABLE  `Livros` (
     [...]
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 ```
-
-
 
 ### Conclusão
 
