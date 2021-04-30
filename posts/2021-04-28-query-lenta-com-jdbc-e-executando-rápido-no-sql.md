@@ -26,7 +26,7 @@ A possível causa pode ser o suporte a unicode, irei abordar o tema para alguns 
 ### **SQL Server**
 
 
-Antes de falarmos do problema em si, é importante primeiro entendermos alguns coisas antes. No SQL Server temos os tipos **VARCHAR**, **CHAR**, **NVARCHAR** e **NCHAR**.
+Antes de falarmos do problema em si, é importante primeiro entendermos algumas coisas antes. No SQL Server temos os tipos **VARCHAR**, **CHAR**, **NVARCHAR** e **NCHAR**.
 
 **NCHAR** e **NVARCHAR** podem armazenar caracteres Unicode.\
 ***CHAR*** e ***VARCHAR*** *não* conseguem armazenar caracteres Unicode.
