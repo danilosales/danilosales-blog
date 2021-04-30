@@ -28,7 +28,7 @@ Antes de falarmos do problema em si, é importante primeiro entendermos alguns c
 **NCHAR** e **NVARCHAR** podem armazenar caracteres Unicode.\
 ***CHAR*** e ***VARCHAR*** *não* conseguem armazenar caracteres Unicode.
 
-Devido esta característica é possível termos colunas em uma mesma tabela com suporte a unicode e outras sem este suporte. O driver JDBC do SQL Server por default tem habilitado que toda String enviada como um parâmetro está em unicode, sendo assim ao realizar um where de uma coluna varchar é realizada a conversão de cada uma das linhas das linhas da tabela para unicode.
+Devido esta característica é possível termos colunas em uma mesma tabela com suporte a unicode e outras sem este suporte. O driver JDBC do SQL Server por default tem habilitado que toda String enviada como um parâmetro está em unicode, sendo assim ao realizar um where de uma coluna varchar é realizada a conversão de cada uma das linhas da tabela para um tipo **N**.
 
 Para que fique mais fácil de entender vamos ao exemplo:
 
