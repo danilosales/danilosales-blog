@@ -21,7 +21,10 @@ Hoje eu resolvi trazer uma dica de um problema que já presenciei algumas vezes 
 
 A possível causa pode ser o suporte a unicode, irei abordar o tema para alguns banco de dados:
 
+
+
 ### **SQL Server**
+
 
 Antes de falarmos do problema em si, é importante primeiro entendermos alguns coisas antes. No SQL Server temos os tipos **VARCHAR**, **CHAR**, **NVARCHAR** e **NCHAR**.
 
@@ -31,6 +34,7 @@ Antes de falarmos do problema em si, é importante primeiro entendermos alguns c
 Devido esta característica é possível termos colunas em uma mesma tabela com suporte a unicode e outras sem este suporte. O driver JDBC do SQL Server por default tem habilitado que toda String enviada como um parâmetro está em unicode, sendo assim ao realizar um where de uma coluna varchar é realizada a conversão de cada uma das linhas da tabela para um tipo **N**.
 
 Para que fique mais fácil de entender vamos ao exemplo:
+
 
 ```sql
 -- Criação da tabela
@@ -58,6 +62,7 @@ O código acima é auto-explicativo, basicamente é criado uma tabela chamado li
 
 Com base nisso o seguinte código será executado:
 
+
 ```java
 try {
   // Ativa as estatiticas do SQL Server
@@ -82,19 +87,23 @@ try {
 }
 ```
 
+
 Se olharmos o resultado do plano de execução podemos ver que é realizado um **Index Scan**  ao invés de um **Index Seek**, ou seja, o índice foi completamente ignorado.
 
 O índice não foi utilizado porque como a coluna de titulo é do tipo varchar e como falado anteriormente toda String é por default é enviada como unicode ele acaba por realizar uma conversão de varchar para nvarchar.
 
 A solução para isto é bem simples, basta adicionarmos o parâmetro **sendStringParametersAsUnicode=false**  na URL de conexão ficando assim:
 
+
 ***`jdbc:sqlserver://localhost:1433;databaseName=teste;sendStringParametersAsUnicode=false;`***
+
 
 Com isto ao executar código acima novamente é utilizado o **Index Seek**. A instrução acima diz que os parâmetros em String não devem ser interpretados como unicode. 
 
 ***Certo Danilo, isso resolve meu problema em praticamente todas as buscas que faço no sistema, mas e se eu tiver uma coluna que deve ser do tipo NVARCHAR para armazenar um emoji por exemplo, como eu faço ?*** 
 
 Bom neste caso é simples caso usemos JDBC diretamente temos dois métodos auxiliares **setNString** e **getNString** para manipular dados unicode, e no caso de usar JPA/Hibernate, basta adicionar a anotação **@Nationalized**
+
 
 ```java
 @Entity(name = "Livros")
@@ -111,7 +120,10 @@ public class Livros {
 }
 ```
 
+
+
 ### **Oracle**
+
 
 No caso do banco de dados Oracle, também temos situação parecida com o do SQL Server, é possível definir colunas em uma mesma tabela que podem ser unicode(**NCHAR, NVARCHAR2, NCLOB**).
 
@@ -134,7 +146,11 @@ Se você utiliza hibernate, basta adicionar a seguinte propriedade para indicar 
 
 **hibernate.connection.defaultNChar=true**
 
+
+
+
 ### PostgreSQL e MySQL
+
 
 No caso destes dois bancos de dados não temos colunas com suporte a unicode e sem suporte em uma mesma tabela, somente a nível de tabela ou banco de dados, então não temos problema de conversão ao realizar um WHERE em uma tabela. Estes dois banco de dados utilizam a codificação de UTF-8 para fornecer suporte ao unicode.
 
@@ -149,7 +165,10 @@ CREATE TABLE  `Livros` (
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 ```
 
+
+
 ### Conclusão
+
 
 Neste artigo abordei os alguns banco de dados quando se trata de como os parâmetros são interpretados, é importante sempre nos atentarmos e olharmos a documentação destes bancos para entender como o driver jdbc funciona para cada um deles.
 
