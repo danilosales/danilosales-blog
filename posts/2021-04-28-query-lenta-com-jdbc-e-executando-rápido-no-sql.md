@@ -17,7 +17,9 @@ image: assets/img/query-lenta.png
 ---
 Opa, fala jovem, tudo certo ?
 
-Hoje eu resolvi trazer uma dica de um problema que já presenciei algumas vezes em minha carreira, onde executava uma query diretamente e tem uma performance boa e quando era executada através do JPA/Hibernate apresenta uma lentidão. A possível causa pode ser o suporte a unicode, irei abordar o tema para alguns banco de dados:
+Hoje eu resolvi trazer uma dica de um problema que já presenciei algumas vezes em minha carreira, onde executava uma query diretamente e apresentava uma boa performance e quando era executada através do JPA/Hibernate apresentava uma lentidão. 
+
+A possível causa pode ser o suporte a unicode, irei abordar o tema para alguns banco de dados:
 
 ### **SQL Server**
 
