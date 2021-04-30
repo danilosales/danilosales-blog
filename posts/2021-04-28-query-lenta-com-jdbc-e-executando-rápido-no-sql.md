@@ -3,7 +3,7 @@ thumbnail: assets/img/query-lenta.png
 title: Query lenta no JPA/Hibernate, e executando rápido no SQL?
 description: "Se sua query é rapida ao executar o SQL diretamente e é lenta
   através do JDBC ou JPA/Hibernate, isto pode ser somente configuração. "
-date: 2021-04-27 10:13:00
+date: 2021-04-29 22:42:00
 tags:
   - java
   - hibernate
