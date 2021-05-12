@@ -224,7 +224,7 @@ const toggleButton = () => setIsDisabled(isDisabled => !isDisabled)
 
 ### Conclusão
 
-Como falado acima, isso são sugestões que na minha humilde opinião tornam o seu código mais legivel, para concluir as dicas a seguir não são específicas do React, mas sim boas práticas para escrever código limpo em JavaScript (ou qualquer linguagem de programação, nesse caso).
+Como falado acima, isso são sugestões que na minha experiência profissional tornam o código mais legível, para concluir as dicas a seguir não são específicas do React, mas sim boas práticas para escrever código limpo em JavaScript (ou qualquer linguagem de programação, nesse caso).
 
 * Extraia lógicas complexa em pequenas funções com nomes claros do que elas fazem.
 * Extraia números mágicos em constantes.
