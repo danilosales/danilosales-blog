@@ -68,7 +68,7 @@ return (
 
 #### 3. Renderização condicional
 
-Se você precisa renderizar algo quando somente se essa condição for verdadeira, não utilize o operador  ternário, utilize o operador **&&** para isso.
+Se você precisa renderizar algo somente se essa condição for verdadeira, não utilize o operador ternário, utilize o operador **&&** para isso.
 
 ```javascript
 //Ruim
@@ -111,11 +111,9 @@ return (
 
 E no caso de termos mais de uma condicional ? Nesse caso se liga na dica abaixo:
 
-
-
 #### 4. Object Literals
 
-Fazer uso de Object Literals nos ajuda muito para deixar o nosso código mais legível. Digamos que você queira mostrar três tipos de usuários com base em suas funções. De modo tradicional teríamos que usar clássico if/else ou switch, mas usado Object Literals seu código fica muito mais limpo, veja abaixo:
+Fazer uso de Object Literals nos ajuda muito para deixar o nosso código mais legível. Digamos que você queira mostrar três tipos de usuários com base em suas funções. No modo *"tradicional"* teríamos que usar um if/else ou switch, mas usando Object Literals seu código fica muito mais limpo, veja abaixo:
 
 ```javascript
 //Ruim
@@ -144,11 +142,9 @@ const Component = components[role];
 return <Componenent />;
 ```
 
-
-
 #### 5. Utilize Object Destructuring
 
-Use a desestruturação de objetos a seu favor. Digamos que você precise mostrar os detalhes de um usuário. 
+Use a desestruturação de objetos a seu favor. Digamos que você precise mostrar os detalhes de um usuário, veja como ficaria a implementação: 
 
 ```javascript
 //Ruim
@@ -172,8 +168,6 @@ return (
 )
 ```
 
-
-
 #### 6. Utilize Template Literals
 
 Use Template Literals para construir strings grandes. Evite usar concatenação de string. É bom e limpo.
@@ -185,8 +179,6 @@ const userDetails = user.name + " é um " + user.profession
 //Bom
 const userDetails = `${user.name} é um ${user.proffession}`
 ```
-
-
 
 #### 7. Organize seus imports
 
@@ -215,8 +207,6 @@ import ErrorImg from '../../assets/images/error.png';
 import colors from '../../styles/colors';
 ```
 
-
-
 #### 8. Definir um estado que depende do estado anterior
 
 Sempre defina o estado como uma função se o novo estado depender do estado anterior. As atualizações de estado no React são feitas em batch, e podem não gravar suas mudanças dessa forma podendo levar a resultados inesperados.
@@ -232,8 +222,6 @@ const [isDisabled, setIsDisabled] = useState(false)
 const toggleButton = () => setIsDisabled(isDisabled => !isDisabled)
 ```
 
-
-
 ### Conclusão
 
 Como falado acima, isso são sugestões que na minha humilde opinião tornam o seu código mais legivel, para concluir as dicas a seguir não são específicas do React, mas sim boas práticas para escrever código limpo em JavaScript (ou qualquer linguagem de programação, nesse caso).
@@ -241,7 +229,5 @@ Como falado acima, isso são sugestões que na minha humilde opinião tornam o s
 * Extraia lógicas complexa em pequenas funções com nomes claros do que elas fazem.
 * Extraia números mágicos em constantes.
 * Use variáveis com nomes claros do que elas representam.
-
-
 
 É isso pessoal, um abraço e até o próximo post.
