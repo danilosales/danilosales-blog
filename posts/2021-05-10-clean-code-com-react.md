@@ -73,16 +73,16 @@ Se você precisa renderizar algo somente se essa condição for verdadeira, não
 ```javascript
 //Ruim
 return (
-  <div>
+  <>
     {showConditionalText ? <p>Mostra se a condição for verdadeira!</p> : null}
-  </div>
+  </>
 )
 
 //Bom
 return (
-  <div>
+  <>
     {showConditionalText && <p>Mostra se a condição for verdadeira!</p>}
-  </div>
+  </>
 )
 ```
 
@@ -91,21 +91,21 @@ Continuando neste quesito de renderização condicional temos um outro ponto que
 ```javascript
 //Ruim
 return (
-  <div>
+  <>
     {showConditionalText && <p>Mostra se a condição for verdadeira!</p>}
     {!showConditionalText && <p>Mostra se a condição for falsa!</p>}
-  </div>
+  </>
 )
 
 //Bom
 return (
-  <div>
+  <>
     {showConditionalText ? (
       <p>Mostra se a condição for verdadeira!</p>
     ) : (
       <p>Mostra se a condição for falsa!</p>
     )}
-  </div>
+  </>
 )
 ```
 
