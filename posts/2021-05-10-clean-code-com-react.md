@@ -3,7 +3,7 @@ title: Clean Code com React
 description: React é uma lib que não define como as coisas devem ser
   estruturadas. É exatamente por isso que é nossa responsabilidade manter nossos
   projetos limpos e fáceis de manter.
-date: 2021-05-09 22:38:54
+date: 2021-05-11 23:47:19
 tags:
   - react
   - javascript
