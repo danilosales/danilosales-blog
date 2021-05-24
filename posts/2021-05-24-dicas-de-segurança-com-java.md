@@ -59,7 +59,7 @@ Cross-site scripting (XSS) é um problema bem conhecido e utilizado principalmen
 
 A solução básica para este risco de segurança em Java é "sanitizar" a entrada antes de usá-lo e salvar em nossas bases. Existem diversas libs que realizam este tipo de trabalho tanto para validar na entrada como na saída para exibir em tela. A própria OWASP fornece uma lib em java para isto, como pode ser visto [aqui](https://dzone.com/articles/cross-site-scripting-xss-attack-remediation)
 
-#### 3.  XXE Injection
+### 3.  XXE Injection
 
 Apesar de hoje em dia utilizarmos bastante JSON em nossas aplicações ainda temos cenários que utilizamos XML, e para os casos onde temos a XML eXternal Entity (XXE) habilitado, é possível criar um XML malicioso, conforme visto a seguir, e ler o conteúdo de um arquivo em nosso servidor e é uma vulnerabilidade de segurança Java que precisamos prevenir. As bibliotecas Java XML são particularmente vulneráveis à injeção XXE porque a maioria dos analisadores XML tem entidades externas habilitadas por padrão.
 
