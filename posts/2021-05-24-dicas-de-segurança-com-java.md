@@ -3,7 +3,7 @@ title: Dicas de segurança com Java
 description: “Segurança”, esta palavra tem sido muito dita nos últimos anos.
   Qualquer um pode codificar, mas se nosso código não for confiável o
   suficiente, ele não poderá ser usado por muito tempo.
-date: 2021-05-23 20:26:44
+date: 2021-05-24 24:08:39
 tags:
   - java
   - security
