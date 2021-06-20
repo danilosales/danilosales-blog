@@ -165,3 +165,9 @@ A segurança no Java depende mais de medidas tomadas pelo desenvolvedor para evi
 Se você atualizar o Java corretamente, usa apenas os módulos necessários e certifica-se de que seus aplicativos sejam construídos com uma mentalidade de segurança, você consegue minimizar o risco.
 
 Obrigado pelo tempo dedicado até aqui e até a próxima.
+
+
+
+**Referências:**
+
+\- https://snyk.io/blog/10-java-security-best-practices/
