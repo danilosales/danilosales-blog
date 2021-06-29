@@ -32,7 +32,7 @@ Se a gente imaginar uma casa:
 
 **Flexbox** é unidimensional, ou seja, linha OU coluna e não ambos, então é perfeito para o desenvolvimento interno de COMPONENTES.
 
-**CSS grid** é um módulo multi-dimensional de layout, o que significa que ele possui colunas e linhas, perfeito para layouts.
+**CSS grid** é um módulo bi-dimensional de layout, o que significa que ele possui colunas e linhas, perfeito para layouts.
 
 
 
